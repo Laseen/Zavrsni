@@ -1,0 +1,28 @@
+@mixin translateY($e){
+    -webkit-transform: translateY($e);
+    -moz-transform: traslateY($e);
+    transform: translateY($e);
+}
+
+@mixin transition($e){
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    transition: $e;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+a{
+    text-decoration: none;
+    @include transition(.4s ease-in-out);
+    cursor: pointer;
+
+    &:hover{
+        text-decoration: none;
+        color: red;
+        @include transition(.4s ease-in-out);
+    }
+}
