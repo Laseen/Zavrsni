@@ -6,13 +6,12 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <a href="http://www.ros.org/"> <img src={logoros} className="logoros" alt="logoros"/> </a>
+        <a href="http://www.ros.org/" target="_blank"> <img src={logoros} className="logoros" alt="logoros"/> </a>
         <nav>
             <ul>
-                <li> <a href="#">Home</a> </li>
-                <li> <a href="#">Info</a> </li>
-                <li> <a href="#">Demo</a> </li>
-                <li> <a href="#">Tools</a> </li>
+              <li> <a href="#">Home</a> </li>
+              <li> <a href="#">Info</a> </li>
+              <li> <a href="#">Demo</a> </li>
             </ul>
         </nav>        
       </header>

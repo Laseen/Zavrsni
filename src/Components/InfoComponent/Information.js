@@ -1,53 +1,63 @@
 import React, { Component } from 'react';
-
+import ros from './ROSthumb.jpg';
+import rosbridge from './Rosbridgethumb.png';
+import reactjs from './Reactthumb.png';
+import gulpjs from './Gulpthumb.jpg';
+import sass from './Sassthumb.jpg';
+import github from './octobiwan.jpg';
 
 class Information extends Component {
-    constructor() {
-        super()
-        this.state = {
-          carousel: [{
-            thumbnailTitle:'ROS',
-            thumbnail: 'C:/Users/Petar/my-app/src/Components/InfoComponent/ROSthumb.jpg',
-          },{
-            thumbnailTitle:'ROSBridge',
-            thumbnail: 'C:/Users/Petar/my-app/src/Components/InfoComponent/Rosbridgethumb.png',
-          },{
-            thumbnailTitle:'React.js',
-            thumbnail:'C:/Users/Petar/my-app/src/Components/InfoComponent/Reactthumb.png',
-          },{
-            thumbnailTitle:'Gulp.js',
-            thumbnail: 'C:/Users/Petar/my-app/src/Components/InfoComponent/Gulpthumb.jpg',
-          },{
-            thumbnailTitle:'Sass/scss',
-            thumbnail:'C:/Users/Petar/my-app/src/Components/InfoComponent/Sassthumb.jpg',
-          }]
-        }
-      }
-
     render() {
         return (
         <div className="bodyInfo">
             <div className="spacer">
                 <h1 className="headerMain">Additional Information </h1>
             </div>
-            <div id="list-container">
-            <nav>
+            <nav className="listContainer">
                 <ul>
-                <div className="upperList">
-                    <li> <a href="http://www.ros.org/">{this.state.carousel.thumbnailTitle}</a> </li>
-                    <li> <a href="http://wiki.ros.org/rosbridge_suite">{this.state.carousel.thumbnailTitle}</a> </li>
-                    <li> <a href="https://reactjs.org/">{this.state.carousel.thumbnailTitle}</a> </li>
-                </div>
-                <div className="lowerList">
-                    <li> <a href="https://gulpjs.com/">{this.state.carousel.thumbnailTitle}</a> </li>
-                    <li> <a href="https://sass-lang.com/">{this.state.carousel.thumbnailTitle}</a> </li>
-                </div>
+                    <li>
+                        <a href="http://www.ros.org/" target="_blank">
+                            <h4>ROS</h4>
+                            <img src={ros} className="picture" alt="ROS" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://wiki.ros.org/rosbridge_suite" target="_blank">
+                            <h4>ROSbridge</h4>
+                            <img src={rosbridge} className="picture" alt="ROSB" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://reactjs.org/" target="_blank">
+                            <h4>React.js</h4>
+                            <img src={reactjs} className="picture" alt="React" />
+                        </a>
+                    </li>
                 </ul>
-            </nav>        
-            </div>
+                <ul>    
+                    <li>
+                        <a href="https://gulpjs.com/" target="_blank">
+                            <h4>Gulp.js</h4>
+                            <img src={gulpjs} className="picture" alt="Gulp" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://sass-lang.com/" target="_blank">
+                            <h4>Sass</h4>
+                            <img src={sass} className="picture" alt="Sass" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Laseen/Zavrsni" target="_blank">
+                            <h4>GitHub</h4>
+                            <img src={github} className="picture" alt="Github" />
+                        </a>
+                    </li>
+                </ul>       
+            </nav>
         </div>
         );
     }
 }
 
-export default Homepage;
+export default Information;

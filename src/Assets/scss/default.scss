@@ -1,6 +1,5 @@
 @import "_config.scss";
 
-
 header {
     position: relative;
     display: block;
@@ -37,9 +36,6 @@ header {
             list-style-type: none;
             display: inline-block;
             margin-right: 20px;
-            &:first-child {
-                border-bottom: 2px solid red;
-            }
             a {
                 font-size: 20px;
                 line-height: normal;
@@ -238,9 +234,10 @@ footer {
 
 };
 
-/*.bodyInfo{
-position: sticky;
-    height: 800px;
+.bodyInfo{
+    position: sticky;
+    height: 900px;
+    width: 100%;
     overflow: auto;
     text-align: center;
     .spacer {
@@ -250,17 +247,36 @@ position: sticky;
             font-size: 50px;
             color: black;
             text-shadow: 2px 2px 3px rgba(blue, 0.4);
-            b{
+            b {
                 color: red;
             }
         }
-    
+    }
+    .listContainer {
+        width: 100%;
+        min-width: 800px;
+        ul li {
+            display: inline-block;
+            margin: 2% 5% 5% 5%;
+            a {
+                font-size: 20px;
+                line-height: normal;
+                color: black;
+                }
+            }
+        .picture{
+            width: 200px;
+            height: 200px;
+            box-shadow: 0 0 100px lightblue;
+            border-style: solid;
+            border-width: 7px;
+            border-color: lightblue;
+            border-radius: 10px;
+            &:hover {opacity: .7;}
+            }
+    }
 };
-
-.bodyTools{
-
-};
-
+/*
 .bodyDemo{
 
 };
