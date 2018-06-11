@@ -51,14 +51,14 @@ class Homepage extends Component {
 
   render() {
     return (
-      <div className="bodyHome">
+      <div className="homepageContainer">
         <div className="spacer">
             <h1 className="headerMain">ROS <b>&</b> React </h1>
         </div>
-        <div id="thumbnail-container">
+        <div id="thumbnailsContainer">
           <i className="fa fa-angle-double-left" id="arrow-left" onClick={() => this.changeSelectedCarousel('previous')} />
           <i className="fa fa-angle-double-right" id="arrow-right" onClick={() => this.changeSelectedCarousel('next')} />
-          <article className="thumbnail-main" id={this.state.carousel[this.state.selectedCarousel].cssId}>
+          <article className="thumbnailMain" id={this.state.carousel[this.state.selectedCarousel].cssId}>
             <div className="box">
               <h3 className="headerBox">{this.state.carousel[this.state.selectedCarousel].thumbnailTitle} </h3>
                 <p> {this.state.carousel[this.state.selectedCarousel].thumbtxt} </p>
