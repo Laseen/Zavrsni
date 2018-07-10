@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './Components/HeaderComponent/Header';
 import Footer from './Components/FooterComponent/Footer';
-import Homepage from './Components/HomepageComponent/Homepage'
-import Information from './Components/InfoComponent/Information';
+import FirstPage from './Components/FirstPageComponent';
+import RosComponent from './Components/RosComponent/RosComponent';
 import './Assets/css/default.min.css';
 
 class App extends Component {
@@ -10,13 +11,14 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Header />
-
-        <Homepage />
-
-        <Information />
-
-        <Footer />
+        <Header/>
+        <BrowserRouter>
+          <div>
+            <Route path="/home" component={FirstPage} />
+            <Route path="/RosTurtle" component={RosComponent}/>
+          </div>
+        </BrowserRouter>
+        <Footer/>
 
       </div>
     );

@@ -26,7 +26,7 @@ class Homepage extends Component {
   }
 
   componentDidMount() {
-    var intervalId = setInterval(() => this.changeSelectedCarousel('next'), 15000);
+    var intervalId = setInterval(() => this.changeSelectedCarousel('next'), 10000);
     this.setState({intervalId: intervalId});
   }
 

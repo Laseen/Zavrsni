@@ -9,8 +9,8 @@ class Header extends Component {
         <a href="http://www.ros.org/" target="_blank" rel="noopener noreferrer"> <img src={logoros} className="logoros" alt="logoros"/> </a>
         <nav>
             <ul>
-              <li> <a href="#">Home</a> </li>
-              <li> <a href="#">Demo</a> </li>
+              <li> <a href="http://localhost:3000/home">Home</a> </li>
+              <li> <a href="http://localhost:3000/RosTurtle">Demo</a> </li>
             </ul>
         </nav>        
       </header>

@@ -4,7 +4,8 @@ header {
     position: relative;
     display: block;
     width: 100%;
-    background-image: url("C:/Users/Petar/my-app/src/Components/HeaderComponent/home.jpg");
+    min-width: 1500px;
+    background-image: url("../../Components/HeaderComponent/home.jpg");
     height: 90px;
     .logoros {
         position: relative;
@@ -52,6 +53,7 @@ header {
 .homepageContainer {
     position: sticky;
     height: 800px;
+    min-width: 1500px;
     overflow: auto;
     text-align: center;
     .spacer {
@@ -82,7 +84,7 @@ header {
         #arrow-left {
             position: sticky;
             margin-left: 3%;
-            margin-top: 15%;
+            margin-top: 250px;
             float: left;
             font-size: 48px;
             cursor: pointer;
@@ -90,7 +92,7 @@ header {
         #arrow-right {
             position: sticky;
             margin-right: 3%;
-            margin-top: 15%;
+            margin-top: 250px;
             float: right;
             font-size: 48px;
             cursor: pointer;
@@ -98,8 +100,8 @@ header {
 
         #thumbnail3 {
             height: 500px;
-            background-image: url("C:/Users/Petar/my-app/src/Components/HomepageComponent/robot_internet.jpg");
-            background-size:cover;
+            background-image: url("../../Components/HomepageComponent/Robot-typing.jpg");
+            background-size: cover;
             border-style: solid;
             border-width: 5px;
             
@@ -125,12 +127,12 @@ header {
         }
         #thumbnail2 {
             @extend #thumbnail3;
-            background-image: url("C:/Users/Petar/my-app/src/Components/HomepageComponent/EUROPEAN-BUSINESS-AI-AND-ROBOTICS.jpg");
+            background-image: url("../../Components/HomepageComponent/EUROPEAN-BUSINESS-AI-AND-ROBOTICS.jpg");
         }
         #thumbnail1 {
             @extend #thumbnail3;
             background-size: auto;
-            background-image: url("C:/Users/Petar/my-app/src/Components/HomepageComponent/React_illo_final_720x400.png");
+            background-image: url("../../Components/HomepageComponent/React_illo_final_720x400.png");
             .box {
                 left: 0;
                 bottom: 0;
@@ -141,14 +143,57 @@ header {
     }
 };
 
+.informatioContainer{
+    position: sticky;
+    height: 1000px;
+    width: 100%;
+    min-width: 1500px;
+    overflow: auto;
+    text-align: center;
+    .spacer {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        width: 100%;
+        .headerMain {
+            font-size: 50px;
+            color: black;
+            text-shadow: 2px 2px 3px rgba(blue, 0.4);
+        }
+    }
+    .listContainer {
+        width: 100%;
+
+        ul li {
+            display: inline-block;
+            margin: 2% 5% 5% 5%;
+            a {
+                font-size: 20px;
+                line-height: normal;
+                color: black;
+                }
+            }
+        .picture{
+            width: 200px;
+            height: 200px;
+            box-shadow: 0 0 100px lightblue;
+            border-style: solid;
+            border-width: 7px;
+            border-color: lightblue;
+            border-radius: 10px;
+            &:hover {opacity: .7;}
+            }
+    }
+};
+
 footer {
     position: relative;
     display: flex;
     bottom: 0;
     margin: 0;
     width: 100%;
+    min-width: 1500px;
     height: 150px;
-    background-image: url("C:/Users/Petar/my-app/src/Components/FooterComponent/footer.jpg");
+    background-image: url("../../Components/FooterComponent/footer.jpg");
     .centerContainer {
         position: relative;
         float: left;
@@ -232,43 +277,56 @@ footer {
 
 };
 
-.informatioContainer{
+.rosContainer{
     position: sticky;
-    height: 900px;
     width: 100%;
+    min-width: 1500px;
+    height: 800px;
     overflow: auto;
     text-align: center;
     .spacer {
         margin-top: 40px;
         margin-bottom: 50px;
-        width: 100%;
         .headerMain {
             font-size: 50px;
             color: black;
             text-shadow: 2px 2px 3px rgba(blue, 0.4);
         }
     }
-    .listContainer {
+    .arrowContainer{
+        position: absolute;
         width: 100%;
-
-        ul li {
-            display: inline-block;
-            margin: 2% 5% 5% 5%;
-            a {
-                font-size: 20px;
-                line-height: normal;
-                color: black;
-                }
+        height: 400px;
+        .arrowBox{
+            position: relative;
+            margin-top: 20px;
+            margin-right: 37.5%;
+            margin-left: 37.5%;
+            width: 25%;
+            height: 100%;
+            #arrowRosUp{
+                @extend .arrow;
+                top: 10%;               
+                float: left;
+                left: 40%; 
             }
-        .picture{
-            width: 200px;
-            height: 200px;
-            box-shadow: 0 0 100px lightblue;
-            border-style: solid;
-            border-width: 7px;
-            border-color: lightblue;
-            border-radius: 10px;
-            &:hover {opacity: .7;}
+            #arrowRosDown{
+                @extend .arrow; 
+                float: left;
+                left: 40%;
+                bottom: 10%;
             }
+            #arrowRosLeft{
+                @extend .arrow;
+                margin-top: 140px;
+                left: 15%;
+            }
+            #arrowRosRight{
+                @extend .arrow;
+                margin-top: 140px;
+                float: left;
+                left: 65%;
+            }
+        }
     }
 };

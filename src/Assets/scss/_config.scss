@@ -26,3 +26,8 @@ a{
         @include transition(.4s ease-in-out);
     }
 }
+.arrow{
+    position: absolute;
+    font-size: 128px;
+    cursor: pointer;
+}
